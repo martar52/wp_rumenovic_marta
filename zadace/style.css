@@ -1,0 +1,96 @@
+/* Zadatak 1: postavljanje osnova */ 
+
+body{
+    font-family:"Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal; 
+    font-variation-settings:
+    "width"100;
+}
+
+
+/* Zadatak 2: Stilovi naslova */
+ h1{
+    font-family: "Roboto", sans-serif;
+    font-size: 3rem;/* ID override */
+    font-weight: 600;
+ }
+#main-title{
+    font-size: 4rem;
+    font-family: "Roboto", sans-serif;
+} 
+
+h2{ 
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    color: #4caf50;
+    
+}  
+
+/* Zadatak 3: Glavni sadržaj */
+p{
+    font-size: 16px; /* Default veličina */ 
+    color: #37474f;
+}
+p:nth-of-type(2){
+    font-size: 18px; 
+    color: #546e7a;
+} 
+
+p:nth-of-type(3){
+    font-size: 20px;
+    color: #78909c; 
+    } 
+ 
+/* Pozadina za listu */ 
+ul{
+    list-style-type: square;
+    padding: 0 20px; 
+    background-color: #eceff1;
+} 
+
+.highlight{
+    color: #ffc107;
+ }
+/* Uređivanje liste */ 
+.custom-1 li{
+    list-style-type: ">";
+}
+.custom-1 li:nth-child(1){
+    list-style-type: ">";
+    } 
+.custom-1 li:nth-child(2){
+    list-style-type: square;
+} 
+.custom-1 li:nth-child(3){
+    list-style-type: circle;
+}
+.custom-1 li:nth-child(4){
+    list-style-type:lower-alpha;
+} 
+.custom-1 li:nth-child(5){
+    list-style-type: lower-greek;
+} 
+.custom-1 li:nth-child(6){
+    list-style-type:upper-alpha
+ }
+.custom-1 li:nth-child(7){
+    list-style-type: upper-roman;
+} 
+.custom-1 li:nth-child(8)::marker{
+   font-size: 150%;
+} 
+.custom-1 li:nth-child(9){
+    list-style-type: square;
+} 
+.custom-1 li:nth-child(10){
+    list-style-type: circle;
+} 
+.custom-1 li:nth-child(11){
+    list-style-type:lower-latin;
+   
+} 
+.custom-1 li:nth-child(12){
+    list-style-type: lower-greek;
+}
