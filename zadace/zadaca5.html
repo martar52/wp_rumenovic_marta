@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="author" content="Marta Rumenović">
+    <title>Zadaća 5</title> 
+    <style> 
+
+   /*  Stiliziranje divova */  
+
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif; 
+            background-color:coral;
+        } 
+
+        .container{
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: 1fr 2fr; 
+            grid-auto-rows: auto; 
+            padding: 2rem;
+        }
+
+        .title{
+            font-family: 'Times New Roman', Times, serif; 
+            background-color:bisque; 
+            font-size: 4rem;
+            font-style: italic; 
+            color:rgb(4, 3, 3);
+            background-image: linear-gradient(rgb(239, 152, 30), rgb(246, 177, 122)); 
+            text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.533); 
+            text-align: center; 
+            grid-column: span 2; 
+            padding: 1rem; 
+            border-radius: 10px;
+            text-transform: uppercase;
+        } 
+
+        .section-box{
+            grid-column: span 2;
+            background-color: beige; 
+            color: rgb(181, 61, 17); 
+            text-align: center;
+            padding: 3rem;
+            margin: 3rem 0;
+            border-radius: 10px; 
+            font-size: 4rem; 
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+
+        .slika{
+            background-color: lightsalmon; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 6px rgb(0, 0, 0.01);
+        } 
+
+        .slika img{
+            max-width: 100%; 
+            max-height: 100%; 
+            object-fit: contain; 
+            border-radius: 10px;
+        }
+        .recept{
+            background-color:salmon;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgb(0, 0, 0.1); 
+            color: rgb(11, 11, 11); 
+            display: flex; 
+            flex-direction: column; 
+            gap: 1rem;
+        } 
+
+        .recept h2{
+            margin: 0;
+            font-size: 3rem; 
+            text-align: center;
+        } 
+
+        .recept strong{
+            font-size: 2rem;
+            color:darkred;
+        } 
+
+        .recept li{
+            margin-bottom: 0.5rem; 
+            font-size: 2rem;
+        } 
+
+  
+
+
+        @media (max-width:480px){
+            .container{
+                grid-template-columns: 1fr;
+            } 
+
+            .title{
+                font-size: 1.5rem;
+            } 
+
+            .section-box{
+                font-size: 1.2rem;
+            }
+     } 
+
+
+    .card1{
+            background-color:lavender; 
+            font-family:cursive; 
+            font-size: 24px; 
+            padding: 20px; 
+            margin: 20px; 
+            width: 1430px; 
+            display: inline-block; 
+            border: 6px solid #333333; 
+            border-radius: 6px; 
+            position: relative; 
+            border-style: dotted;
+    } 
+
+    .card2{
+            background-color:gold;
+            font-family:cursive; 
+            font-size: 24px; 
+            padding: 20px; 
+            margin: 20px; 
+            width: 1430px; 
+            display: inline-block; 
+            border: 6px solid #333333; 
+            border-radius: 6px; 
+            position: relative; 
+            border-style: double;
+    } 
+
+    .card3{
+            background-color:rgb(238, 81, 81);
+            font-family:cursive; 
+            font-size: 24px; 
+            padding: 20px; 
+            margin: 20px; 
+            width: 1430px; 
+            display: inline-block; 
+            border: 6px solid #333333; 
+            border-radius: 6px; 
+            position: relative; 
+            border-style:dashed;
+    } 
+
+    .card4{
+            background-color: darkseagreen;
+            font-family:cursive; 
+            font-size: 24px; 
+            padding: 20px; 
+            margin: 20px; 
+            width: 1430px; 
+            display: inline-block; 
+            border: 6px solid #333333; 
+            border-radius: 6px; 
+            position: relative; 
+            border-style:groove;
+    } 
+
+    .card5{
+            background-color:rgb(249, 69, 56); 
+            font-family:cursive; 
+            font-size: 24px; 
+            padding: 20px; 
+            margin: 20px; 
+            width: 1430px; 
+            display: inline-block; 
+            border: 6px solid #333333; 
+            border-radius: 6px; 
+            position: relative; 
+            border-style: dotted;
+    } 
+
+    .card6{
+            background-color:rgb(255, 132, 0);
+            font-family:cursive; 
+            font-size: 24px; 
+            padding: 20px; 
+            margin: 20px; 
+            width: 1430px; 
+            display: inline-block; 
+            border: 6px solid #333333; 
+            border-radius: 6px; 
+            position: relative; 
+            border-style: double;
+    } 
+
+    .card7{
+            background-color:rgb(239, 147, 213);
+            font-family:cursive; 
+            font-size: 24px; 
+            padding: 20px; 
+            margin: 20px; 
+            width: 1430px; 
+            display: inline-block; 
+            border: 6px solid #333333; 
+            border-radius: 6px; 
+            position: relative; 
+            border-style:dashed;  
+    } 
+
+    .card8{
+            background-color: cyan;
+            font-family:cursive; 
+            font-size: 24px; 
+            padding: 20px; 
+            margin: 20px; 
+            width: 1430px; 
+            display: inline-block; 
+            border: 6px solid #333333; 
+            border-radius: 6px; 
+            position: relative; 
+            border-style:groove;
+    }  
+
+    .obrazac{
+            background-color:lightcoral; 
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgb(0, 0, 0.1); 
+            color: rgb(22, 22, 35); 
+            display: flex; 
+            flex-direction: column; 
+            gap: 1rem;
+     }
+
+</style>
+
+</head>
+<body> 
+<!-- Web stranica posvećena receptima -->  
+<div class="container">
+<div class="item title"><h2>~BRZO I SLASNO~</h2></div>  
+
+<!-- SLATKI RECEPTI -->
+<div class="section-box">KOLAČI &#127856;</div> 
+
+<div class="item recept">
+<h2><em>ZVJEZDICE S CIMETOM &#127775;</em></h2>
+<strong>SASTOJCI: &#128221;</strong><br> 
+                <li>210 g mljevenih badema</li> 
+                <li>105 g mljevenih lješnjaka</li>
+                <li>400 g šećera</li>
+                <li>4 jaja</li>
+                <li>1/2 vrećice mljevene korice naranče</li>
+                <li>8 g mljevenog cimeta</li>
+                <li>šećer u prahu za podlogu</li>
+                <li>250 g šećera u prahu</li>
+                <li>1 bjelanjak</li>
+                <li>2 žlice limunovog soka</li>
+
+<strong>PRIPREMA:</strong> 
+<ol> 
+    <li>U posudu za miješanje staviti mljevene bademe, lješnjake, šećer, mljevenu narančinu koru i cimet u prahu.</li>
+    <li>Potom izmiješati sastojke da se dobro prožmu. </li>
+    <li>Razdvojiti žumanjke od bjelanjaka i bjelanjke kratko istući s vilicom.</li>
+    <li>Sipati bjelanjke u suhu smjesu i dobro sve ujednačiti miješanjem.</li>
+    <li>Od dobivenog tijesta napraviti kuglu i prekriti prozirnom folijom.</li>
+    <li>Staviti smjesu u frižider da odmori 3 sata. Nakon tri sata tijesto kratko premijesiti (podlogu treba posuti šećerom u prahu).</li> 
+    <li>Razvaljati tijesto na debljinu od oko 7 milimetara te modlom za zvjezdice raditi kekse i slagati ih na protvan prekriven papirom za pečenje.</li> 
+    <li>Zvjezdice se peku u zagrijanoj pećnici na 120 stupnjeva Celzijusa 15 minuta. </li> 
+    <li>Bjelanjak stući mikserom u čvrsti snijeg. U snijeg dodati pola količine šećera u prahu, dobro izmiksati te nakon toga i drugu polovicu.</li>
+    <li>Sjediniti smjesu koja će postati jako gusta. Iscijediti pola limuna, te u smjesu uliti 2 jušne žlice soka od limuna.</li>
+    <li>Ponovo sve izmiksati da se dobije homogena bijela smjesa. Smjesu prebaciti u manju posudu, pa u nju uroniti kist te kistom mazati gornje površine zvjezdica i ostaviti da se glazura osuši.</li> 
+</ol>
+</div>
+
+<div class="item slika">
+    <img src="https://recepttura.com/wp-content/uploads/2018/12/zvjezdice-s-cimetom-bozicni-kolacic-cimet-glazura-recepttura.jpg?ezimgfmt=ng:webp/ngcb1" width="1200"  height="1000" alt="vanilice s cimetom"> <br>
+</div>
+
+
+<div class="item recept">
+<h2><em>KUGLOF OD LIMUNA &#127819;</em></h2> 
+<strong> SASTOJCI: &#128221;</strong><br>
+                <li>200 g maslaca</li>
+                <li>190 g šećera</li>
+                <li>1 vanilin šećer</li>
+                <li>korica od 2 limuna</li>
+                <li>4 jaja</li>
+                <li>200 ml kiselog vrhnja</li>
+                <li>360 g glatkog brašna</li>
+                <li>40 g škrobnog brašna gustina</li>
+                <li>malo soli</li>
+                <li>1 prašak za pecivo</li>
+                <li>5 žlica šećera u prahu</li>
+                <li>2 žlice soka od limuna</li> 
+
+<strong>PRIPREMA:</strong> 
+<ol>
+<li>U posudu za miksanje narezati maslac te dodati šećer i vanilin šećer.</li>
+    <li>Naribati koricu 2 limuna te ubaciti u posudu. Pjenasto sve umutiti.</li>  
+    <li>U smjesu dodavati jedno po jedno jaje i iza svakoga dobro izmiksati smjesu. Ubaciti kiselo vrhnje i kratko izmiksati.</li> 
+    <li>Prosijati u posudu brašno, gustin i prašak za pecivo. Lagano ubaciti brašno u smjesu maslaca i jaja, te sve izjednačiti u jednoličnu smjesu.</li> 
+    <li>Lagano ubaciti brašno u smjesu maslaca i jaja, te sve izjednačiti. Kalup za kuglof dobro namazati maslacem te ga pobrašniti.</li> 
+    <li>Kalup na 5 minuta staviti u frižider.</li> 
+    <li>Kuglof se peče na 180 stupnjeva Celzijusa 60 minuta. Pečeni kuglof ostaviti par minuta da se prohladi pa ga izvaditi iz kalupa.</li>  
+</ol>
+</div>
+
+<div class="item slika"> 
+    <img src="https://recepttura.com/wp-content/uploads/2019/04/kuglof-od-limuna-recipe-card-360x360.jpg?ezimgfmt=ng:webp/ngcb1" width="1200"  height="1000" alt="kuglof od limuna"> <br> 
+</div> 
+
+<!-- SLANI RECEPTI --> 
+<div class="section-box">SLANA JELA &#127836;</div> 
+
+<div class="item recept">
+<h2><em>SLAVONSKI LJUTI ČOBANAC &#127858;</em></h2>
+<strong>SASTOJCI: &#128221;</strong><br> 
+                <li>800 g luka</li>
+                <li>3 mrkve</li>
+                <li>200 g korijena celera</li>
+                <li>150 g korijena peršina</li>
+                <li>500 g junetine od buta</li>
+                <li>500 g mesa divljači</li>
+                <li>500 g svinjetine od lopatice</li>
+                <li>vezica peršina i celera</li>
+                <li>4 češnja češnjaka</li>
+                <li>žlica koncentrata rajčice</li>
+                <li>1 žlica slatke mljevene crvene paprike</li>
+                <li>1 žličica mljevene sušene papričice</li>
+                <li>sol i papar</li>
+                <li>200 ml bijelog vina</li>
+                <li>2 l vode</li>
+                <li>4 žlice svinjske masti</li>
+
+<strong>PRIPREMA:</strong> 
+<ol>
+    <li>Prvo treba na sitne komadiće narezati svo povrće: luk, mrkvu, korijen celera i korijen peršina.</li>
+<li>Zatim na kocke veličine zalogaja narezati svo meso. Narezati na sitno češnjak, te lišće peršina i celera.</li>
+<li>Svinjsku mast staviti u veliku posudu te je zagrijati na srednje jakoj vatri. Ubaciti narezani luk te ga dinstati 15-ak minuta.</li> 
+<li>Sada ubaciti meso divljači pa i njega dinstati 15 minuta. Nakon divljači ubaciti junetinu te je dinstati 15 minuta.</li> 
+<li>Svinjetina je najmekše meso pa se ona ubacuje zadnja. Sada na laganoj vatri sve dinstati dok voda iz mesa potpuno ne ishlapi.</li>
+<li>Ubaciti narezanu mrkvu, korijen peršina i korijen celera i uz miješanje dinstati 15 minuta. Nakon toga ubaciti češnjak, list celera.</li>  
+<li>Odmah uliti 2 litre vode i vino te kad zakuha kuhati još 2,5 sati. Pred kraj kuhanja posoliti i popapriti po ukusu.</li>  
+</ol>
+</div>
+
+<div class="item slika"> 
+    <img src="https://recepttura.com/wp-content/uploads/2022/02/cobanac-recept-recepttura-recipe-card-360x360.jpg?ezimgfmt=ng:webp/ngcb1" width="1200" height="1500" alt="slavonski čobanac"><br>
+</div>
+
+<div class="item recept">
+<h2><em>FAŠIRANCI &#127832;</em></h2>
+<strong>SASTOJCI: &#128221;</strong><br>
+                <li>500 g miješanog mljevenog mesa</li>
+                <li>1 crveni luk</li>
+                <li>2 šnite starog kruha</li>
+                <li>100 ml mlijeka</li>
+                <li>1 jaje</li>
+                <li>70 g krušnih mrvica</li>
+                <li>svježi peršin</li>
+                <li>sol</li>
+                <li>papar</li>
+                <li>ulje za prženje</li>
+<strong>PRIPREMA:</strong> 
+<ol>
+    <li>Prvo treba narezati žemlju ili kruh na sitne kockice.</li>
+    <li>Narezane kockice prebaciti u veću posudu, preliti mlijekom, te ostaviti da se žemlja namoči. Za to vrijeme narezati luk i peršin.</li> 
+    <li>Crveni luk oguliti i narezati na sitne komadiće. Peršin također sitno narezati.</li>   
+    <li>U tavici zagrijati malo ulja i kad se zagrije sipati luk te ga kratko prepržiti na laganoj vatri uz miješanje.</li> 
+    <li>Ostaviti ga sa strane da se prohladi. Omekšalu narezanu žemlju dobro izgnječiti prstima.</li> 
+    <li>Ubaciti meso, krušne mrvice, jaje, peršin i prohlađeni luk. Posoliti i popapriti smjesu.</li> 
+    <li>Sve dobro izmiješati da se sastojci prožmu. Napravljenu smjesu podijeliti na 12 jednakih komada i od nje raditi okruglice</li> 
+    <li>Zagrijati ulje u tavi te na srednje jakoj vatri popržiti faširance do zlatno žute boje s obje strane.</li>
+</ol>
+</div>
+
+<div class="item slika">
+    <img src="https://recepttura.com/wp-content/uploads/2021/11/fasiranci-recept-recepttura-recipe-card-360x360.jpg?ezimgfmt=ng:webp/ngcb1" width="1200" height="1200" alt="faširanci"><br>
+</div>
+
+
+<!-- JUHE --> 
+<div class="section-box">JUHE &#129368;</div>
+<div class="item recept">
+    <h2><em>JUHA OD RAJČICE &#127813;</em></h2>
+<strong>SASTOJCI: &#128221;</strong> 
+                <li>1 srednje velika glavica crvenog luka</li>
+                <li>50 g korijena peršina</li>
+                <li>500 pelata oguljene rajčice iz konzerve</li>
+                <li>20 g šećera</li>
+                <li>1 litra vode</li>
+                <li>sol</li>
+                <li>papar</li>
+                <li>ulje za prženje</li>
+                <li>tjestenina po želji</li>
+<strong>PRIPREMA:</strong> 
+<ol> 
+    <li>Oguliti crveni luk te ga narezati na kockice. Očistiti korijen peršina te i njega narezati.</li>
+<li>U široj posudi na štednjaku sipati ulje da prekrije dno posude te ga zagrijati.</li> 
+<li>Ubaciti narezani crveni luk i korijen peršina te sve uz miješanje dinstati 10 minuta na srednje jakoj vatri.</li> 
+<li>Zatim sipati pelate i prvo ih kratko usitniti ručno a onda sa štapnim mikserom do kraja.</li> 
+<li>Vratiti posudu na srednje jaku vatru te dodati šećer. Kratko izmiješati. Sipati vodu, dobro promiješati te posoliti i popapriti po ukusu.</li> 
+<li>Kada juha zakipi kuhati 15 minuta. Nakon toga u juhu ubaciti tjesteninu i kuhati još 10-ak minuta da se tjestenina skuha</li> 
+</ol>
+</div>
+
+<div class="item slika">
+    <img src="https://recepttura.com/wp-content/uploads/2022/02/juha-od-rajcice-recepttura-recipe-card-360x360.jpg?ezimgfmt=ng:webp/ngcb1" width="1200" height="900" alt="juha od rajčice"><br>
+</div>
+
+<div class="item recept">
+    <h2><em>JUHA OD BUNDEVE</em></h2>
+<strong>SASTOJCI: &#128221;</strong>
+                <li>1 kg očišćene bundeve</li>
+                <li>3 veće mrkve</li>
+                <li>2 srednja krumpira</li>
+                <li>1 veća glavica crvenog luka</li>
+                <li>1/2 zelene paprike</li>
+                <li>2 grančice peršina</li>
+                <li>2 grančice celera</li>
+                <li>3 žlice maslinovog ulja ili maslaca</li>
+                <li>1 l vode</li>
+                <li>sol i papar</li>
+                <li>1 žemlja ili pecivo</li>
+<strong>PRIPREMA:</strong> 
+<ol>
+    <li>Oguliti bundevu i prerezati na pola po dužini. Žlicom izdubiti koštice.</li>
+    <li>Narezati obje polovice bundeve na kockice veličine zalogaja. Očistiti crveni luk i narezati ga na komadiće.</li>
+    <li>Oguliti mrkvu i narezati na kolutove. Oprati papriku, narezati na polovice te polovicu na komade.</li> 
+    <li>U posudi na štednjaku staviti maslinovo ulje, zagrijati ga te ubaciti narezani luk i prodinstati.</li>  
+    <li>Kad je luk postao staklast, dodati bundevu i promiješati. Pirjati na laganoj vatri.</li> 
+    <li>Ubaciti i mrkvu i papriku i dinstati uz miješanje. Oguliti krumpir, oprati ga, narezati i ubaciti da se dinsta.</li>
+    <li>Doliti vodu u smjesu, poklopiti i pustiti da zakipi. Kada zakipi kuhati još dvadesetak minuta. Posoliti prema ukusu.</li> 
+    <li>Dok se juha kuha, narezati žemlju ili pecivo na kockice. Staviti ih na grill tavu i zagrijavati uz stalno miješanje</li> 
+    <li>U posudi na štednjaku staviti maslinovo ulje, zagrijati ga te ubaciti narezani luk i prodinstati. </li> 
+    <li>Ubaciti i mrkvu i papriku i dinstati uz miješanje. Oguliti krumpir, oprati ga, narezati i ubaciti da se dinsta.</li>
+    <li>Posoliti prema ukusu. Dok se juha kuha, narezati žemlju ili pecivo na kockice. Staviti ih na grill tavu.</li>
+</ol>
+</div>
+
+<div class="item slika">
+    <img src="https://recepttura.com/wp-content/uploads/2016/10/juha-od-bundeve-recepttura-recipe-card-360x360.jpg" width="1200" height="1300" alt="juha od bundeve"><br>
+</div> 
+
+
+<!-- NAMAZI --> 
+<div class="section-box">NAMAZI</div> 
+<div class="item recept">
+    <h2><em>PAŠTETA OD ČVARAKA</em></h2>
+<strong>SASTOJCI:&#128221; </strong>
+                <li>200 g čvaraka</li>
+                <li>3 jaja</li>
+                <li>3 kisela krastavca</li>
+                <li>1 glavica crvenog luka</li>
+                <li>2 češnja češnjaka</li>
+                <li>1 žličica senfa</li>
+                <li>2 žličice majoneze</li>
+                <li>sol</li>
+                <li>papar</li>
+<strong>PRIPREMA:</strong> 
+<ol> 
+    <li>Prvo treba staviti kuhati jaja. Ubaciti ih u posudu s hladnom vodom i kad zakipi kuhati 10 minuta.</li>
+    <li>Ohladiti ih i oguliti ljusku. Narezati svako jaje na četvrtine. Glavicu luka očistiti pa narezati na manje komade.</li>
+  <li>Češnjak oguliti i prepoloviti. Kisele krastavce također narezati na manje komade.</li>  
+  <li>Čvarke ubaciti u blender (paziti da nema tvrdih dijelova) pa ih dobro samljeti.</li> 
+  <li>Dodati tvrdo kuhana jaja pa opet sve izraditi u blenderu. Zatim dodati crveni luk i češnjak i izraditi smjesu.</li> 
+  <li>Ubaciti i kisele krastavce pa dugo blendati smjesu da se svi sastojci povežu. Na kraju dodati senf i majonezu</li> 
+</ol>
+</div>
+
+<div class="item slika">
+    <img src="https://recepttura.com/wp-content/uploads/2024/01/pasteta-od-cvaraka-recepttura-recipe-card-360x360.jpg" width="1200" height="900" alt="namaz od čvaraka"><br>
+</div>
+
+<div class="item recept">
+    <h2><em>PAŠTETA OD TUNE &#128031;</em></h2>
+<strong>SASTOJCI: &#128221;</strong>
+                <li>2 velike konzerve tunjevine</li>
+                <li>125 g omekšalog maslaca</li>
+                <li>100 g majoneze</li>
+                <li>2 tvrdo kuhana jaja</li>
+                <li>sol</li>
+                <li>papar</li>
+
+<strong>PRIPREMA:</strong> 
+<ol>
+<li> Izvaditi tunjevinu iz konzervi i dobro ocijediti.</li>
+    <li>Staviti u posudu tunjevinu, dodati omekšali maslac i dobro promiješati.</li>
+    <li>U smjesu dodati majonezu i dobro promiješati. Skuhati utvrdo jaja, i kad se ohlade narezati ih na male komadiće.</li> 
+    <li>Ubaciti jaja u smjesu. Promiješati. Očistiti češnjak, narezati ga sitno i ubaciti u smjesu.</li> 
+    <li>Po ukusu posoliti i popapriti paštetu. Ohladiti barem 3 sata prije posluživanja.</li> 
+</ol>
+</div>
+
+<div class="item slika">
+    <img src="https://recepttura.com/wp-content/uploads/2015/11/pasteta-od-tune-recepttura-recipe-card-360x360.jpg?ezimgfmt=ng:webp/ngcb1" width="1200" height="900" alt="pašteta od tune"><br>
+</div>
+                
+
+<!-- KARTICE S VIDEIMA NAVEDENIH RECEPATA -->  
+
+<div class="section-box">VIDEA ZA NAVEDENE RECEPTE</div>
+<div class="card1"><h2>ZVJEZDICE S CIMETOM</h2> 
+    <p class="link9">
+        <a href="https://youtu.be/fJeBLiIiCrk" target="_blank">Ovdje možete pogledati video... :) &#127910;</a>
+    </p> 
+    </div>
+    
+    <div class="card2"><h2>KUGLOF OD LIMUNA</h2>
+    <p class="link10">
+        <a href="https://youtu.be/-hqT4ZB96iM" target="_blank">Ovdje možete pogledati video... :) &#127910;</a>
+    </p>
+    </div> 
+    
+    <div class="card3"><h2>SLAVONSKI LJUTI ČOBANAC</h2> 
+    <p class="link11"> 
+        <a href="https://youtu.be/ZhBNPpatvmA" target="_blank">Ovdje možete pogledati video... :) &#127910;</a>
+    </p>
+    </div> 
+    
+    <div class="card4"><h2>FAŠIRANCI</h2>
+        <p class="link12">
+            <a href="https://youtu.be/owI_OP5_QNQ" target="_blank">Ovdje možete pogledati video... :) &#127910;</a>
+        </p>
+    </div> 
+    
+    <div class="card5"><h2>JUHA OD RAJČICE</h2>
+        <p class="link13">
+            <a href="https://youtu.be/dlAtAmdDyD8" target="_blank">Ovdje možete pogledati video... :) &#127910;</a>
+        </p>
+    </div> 
+    
+    <div class="card6"><h2>JUHA OD BUNDEVE</h2>
+        <p class="link14">
+            <a href="https://youtu.be/wkS6vGTeoJ8" target="_blank">Ovdje možete pogledati video... :) &#127910;</a>
+        </p>
+    </div> 
+
+    <div class="card7"><h2>PAŠTETA OD ČVARAKA</h2>
+        <p class="link15">
+            <a href="https://youtu.be/a5fSu6YEzhY" target="_blank">Ovdje možete pogledati video... :) &#127910;</a>
+        </p>
+    </div> 
+
+    <div class="card8"><h2>PAŠTETA OD TUNE</h2>
+    <p class="link16"> 
+        <a href="https://youtu.be/OrkQNwnawAE" target="_blank">Ovdje možete pogledati video... :) &#127910;</a>
+    </p>
+    </div>
+
+
+
+
+<!-- PRIJAVA --> 
+
+<div class="section-box">!POSTANI ČLAN ZAJEDNICE GURMANA! &#128105;</div> 
+<div class="item obrazac">
+    <h2><em>U nastavku ispunite obrazac, prijavite se za newsletter i primajte obavijesti o novim receptima! &#128233;</em></h2><br>
+<form action="" method="get">
+        <label for="name">Unesi svoje ime:</label>
+        <input type="text" id="name" placeholder="unesi ime..." maxlength="20" size="25"> <br>  
+        <label for="prezime">Unesi svoje prezime:</label>
+        <input type="text" id="prezime" placeholder="unesi prezime..." maxlength="20" size="25"> <br> 
+        <label>Unesi lozinku:</label>
+        <input type="password" maxlength="20"> <br> 
+        <label>Unesi e-mail:</label>
+        <input type="e-mail" required> <br> 
+        <label>Odabir uloge:</label>
+        <input type="radio" name="uloga" id="guest" value="guest"> 
+        <label for="guest">Guest</label> 
+        <input type="radio" name="uloga" id="admin" value="admin">
+        <label for="admin">Admin</label> <br> 
+        <label>Prihvaćam uvjete korištenja:</label> <br> 
+        <input type="checkbox" name="uvjeti korištenja" id="uvjeti korištenja" required> <br> 
+        <input type="submit">
+        <input type="reset"> 
+</form> </div>
+
+
+</body>
+</html>
