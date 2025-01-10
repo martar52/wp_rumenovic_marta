@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolokvij2</title> 
+    
+    <style> 
+    div{
+        position: relative;
+    }
+       .black{
+        background-color: black; 
+        display: inline-block; 
+        height: 350px; 
+        width: 150px; 
+        border-top-left-radius: 5px;
+       border-bottom-left-radius: 5px;
+        margin: 0px 
+        position: absolute;
+       
+       } 
+
+       .yellow{
+        background-color: yellow;
+        display: inline-block;
+        height: 350px; 
+        width: 150px; 
+        margin: 0px; 
+       
+        
+       } 
+
+       .red{
+        background-color: red; 
+        display: inline-block; 
+        height: 350px; 
+        width: 150px; 
+        margin: 0px; 
+        border-top-right-radius: 5px; 
+        position: absolute; 
+        border-bottom-right-radius: 5px;
+       }  
+
+       /* CSS grid */ 
+       .grid{
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 10px; 
+        width: 300px; 
+        margin: 20px auto; 
+        
+       } 
+
+       .grid div{
+        background-color:crimson; 
+        text-align: center; 
+        padding: 20px; 
+        border: 5px solid black; 
+        } 
+
+        /* box model */ 
+        .prvi{
+            border: 1px  solid black; 
+            padding: 15px; 
+            margin: 10px; 
+            width: 250px; 
+            height: 150px; 
+            background-color:hotpink; 
+        } 
+
+        .drugi{
+            border: 1px  solid black; 
+            padding: 15px; 
+            margin: 10px; 
+            width: 250px; 
+            height: 150px; 
+            background-color:bisque; 
+        } 
+
+        .treci{
+            border: 1px  solid black; 
+            padding: 15px; 
+            margin: 10px; 
+            width: 250px; 
+            height: 150px; 
+            background-color:aqua; 
+        } 
+
+        .cetvrti{
+            border: 1px  solid black; 
+            padding: 15px; 
+            margin: 10px; 
+            width: 250px; 
+            height: 150px; 
+            background-color:chocolate;  
+        } 
+
+        .prviparagraf{
+        color:aqua; 
+        font-size: 12px; 
+        margin: 10px;  
+        padding: 10px;
+        } 
+
+        .drugiparagraf{
+        color: yellow; 
+        margin: 10px; 
+        padding:10px;
+        } 
+
+        .treciparagraf{
+            color:red; 
+        font-size: 12px; 
+        margin: 10px;  
+        padding: 10px; 
+        } 
+
+        #cetvrti{
+            color:rgb(160, 23, 46); 
+        font-size: 12px; 
+        margin: 10px;  
+        padding: 10px;
+        } 
+
+        #peti{
+            color:green; 
+        font-size: 12px; 
+        margin: 10px;  
+        padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <!-- Zastava Belgije -->  
+     <h2>Zastava Belgije</h2>
+     <div class="black"></div> 
+     <div class="yellow"></div> 
+     <div class="red"></div> 
+
+    <!--  CSS grid -->
+     <h2>CSS grid</h2> 
+     <div class="grid"> 
+        <div>Crtanje</div>
+        <div>Glazba</div> 
+        <div>Sport</div> 
+        <div>Slikanje</div> 
+        <div>Plesanje</div>
+        <div>Knjige</div>
+        <div>Šivanje</div>
+        <div>Moda</div>
+        <div>Serije</div>
+        <div>Filmovi</div>
+        <div>Časopisi</div> 
+        <div>Vrtlarenje</div>
+        <div>Šoping</div>
+        <div>Kukičanje</div>
+        <div>Ukrašavanje</div> 
+        <div>Roštiljanje</div>
+        </div>  
+
+       <!--  Box model --> 
+         <h2>Box model</h2> 
+         <div class="prvi"></div> 
+         <div class="drugi"></div>
+         <div class="treci"></div> 
+         <div class="cetvrti"></div> 
+
+        <!--  upotreba klase i ID -->
+         <h2>Upotreba klase i ID</h2> 
+    <p class="prviparagraf"> Ovo je prvi paragraf.</p>
+    <p class="drugiparagraf">Ovo je drugi paragraf.</p>
+    <p class="treciparagraf">Ovo je treci paragraf.</p>
+    <p id="cetvrti">ovo je cetvrti paragraf.</p>
+    <p id="peti"> ovo je peti paragarf.</p> 
+
+    
+    <script src="kolokvij2.js"></script>
+</body>
+</html>
